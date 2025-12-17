@@ -7,6 +7,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 To start a local development server, run:
 
 ```bash
+npm intall  //para la intalación de node.js
 ng serve
 ```
 
