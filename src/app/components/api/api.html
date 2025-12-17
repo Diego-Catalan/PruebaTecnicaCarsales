@@ -1,0 +1,27 @@
+<div class="background-con table-bordered">
+    <h1>Lista de episodios</h1>
+    <div class="search-container">Busqueda:
+        <input type="text" [formControl]="searchControl" placeholder="Buscar episodio...">
+
+    </div>
+    <table class="table-bordered ">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Fecha de emisión</th>
+                <th>Código de episodio</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (episode of filterEpi; track episode.id) {
+            <tr>
+                <td>{{ episode.id }}</td>
+                <td>{{ episode.name }}</td>
+                <td>{{ episode.airDate }}</td>
+                <td>{{ episode.episodeCode }}</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

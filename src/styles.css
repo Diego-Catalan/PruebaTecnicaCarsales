@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.background-con {
+    /*color de fondo*/
+    width: 100%;
+    min-height: 100vh;
+    background-color: #5772ac;
+    background-image: url('/rickandmorty/src/img/images.png');
+    color: rgb(218, 163, 163);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.table-bordered {
+    /*lineas de la tabla*/
+    border: 1px solid #dee2e6;
+    text-align: center;
+    margin: auto;
+}
+
+.table-bordered th,
+.table-bordered td {
+    /*lineas de la tabla*/
+    border: 1px solid #dee2e6;
+}
