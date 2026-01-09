@@ -1,27 +1,36 @@
-<div class="background-con table-bordered">
-    <h1>Lista de episodios</h1>
-    <div class="search-container">Busqueda:
-        <input type="text" [formControl]="searchControl" placeholder="Buscar episodio...">
-
+<div class="background-con main-card">
+    <div class="header-section">
+        <h1>Lista de episodios</h1>
+        <div class="search-container">
+            <label for="search">Búsqueda:</label>
+            <input id="search" type="text" [formControl]="searchControl" placeholder="...">
+        </div>
     </div>
-    <table class="table-bordered ">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Fecha de emisión</th>
-                <th>Código de episodio</th>
-            </tr>
-        </thead>
-        <tbody>
-            @for (episode of filterEpi; track episode.id) {
-            <tr>
-                <td>{{ episode.id }}</td>
-                <td>{{ episode.name }}</td>
-                <td>{{ episode.airDate }}</td>
-                <td>{{ episode.episodeCode }}</td>
-            </tr>
-            }
-        </tbody>
-    </table>
+
+    <div class="table-wrapper">
+        <table class="modern-table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Fecha de emisión</th>
+                    <th class="text-center">Código de episodio</th>
+                    <th>Personajes en episodio</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (episode of filterEpi; track episode.id) {
+                <tr>
+                    <td class="id-cell">{{ episode.id }}</td>
+                    <td class="name-cell">{{ episode.name }}</td>
+                    <td class="date-cell">{{ episode.airDate }}</td>
+                    <td class="text-center">
+                        <span class="episode-badge">{{ episode.episodeCode }}</span>
+                    </td>
+                    <td>{{ episode.characterNames.join(' - ') }}</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>

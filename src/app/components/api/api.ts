@@ -26,6 +26,7 @@ export class Api {
         this.listEpisodes = data;
 
       },
+
       error: (err) => console.error('Error al conectar con la API', err)
     });
     this.searchControl.valueChanges.subscribe(value => { //funcion para filtrar los episodios
@@ -41,8 +42,9 @@ export class Api {
         episode.airDate.toLowerCase().includes(cleanQuery) ||
         episode.episodeCode.toLowerCase().includes(cleanQuery) ||
         episode.characters.some((charUrl) => charUrl.toLowerCase().includes(cleanQuery)) ||
+        episode.characterNames.some((charUrl) => charUrl.toLowerCase().includes(cleanQuery)) ||
         episode.created.toLowerCase().includes(cleanQuery)
       );
-    });
+    }); console.log('Episodios obtenidos correctamente', this.listEpisodes)
   }
 }
