@@ -118,3 +118,33 @@ h1 {
 .text-center {
     text-align: center;
 }
+
+.char-container {
+    display: flex;
+    gap: 5px;
+    /* Espacio entre nombres */
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.badge {
+    background-color: #3e4249;
+    /* Gris oscuro estilo R&M */
+    color: #00b5cc;
+    /* Azul brillante R&M */
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    border: 1px solid #00b5cc;
+}
+
+.badge.more {
+    background-color: #97ce4c;
+    /* Verde portal */
+    color: black;
+    border-color: #97ce4c;
+    font-weight: bold;
+    cursor: help;
+    /* Cambia el cursor para indicar que hay info extra */
+}

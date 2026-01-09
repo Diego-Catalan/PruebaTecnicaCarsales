@@ -27,7 +27,19 @@
                     <td class="text-center">
                         <span class="episode-badge">{{ episode.episodeCode }}</span>
                     </td>
-                    <td>{{ episode.characterNames.join(' - ') }}</td>
+                    <td>
+                        <div class="char-container">
+                            @for (charName of episode.characterNames.slice(0, 7); track $index) {
+                            <span class="badge">{{ charName }}</span>
+                            }
+
+                            @if ((episode.characterNames.length || 0) > 2) {
+                            <span class="badge more" [title]="episode.characterNames.join('\n')">
+                                +{{ (episode.characterNames.length || 0) - 2 }}
+                            </span>
+                            }
+                        </div>
+                    </td>
                 </tr>
                 }
             </tbody>
