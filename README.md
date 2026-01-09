@@ -7,6 +7,8 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 To start a local development server, run:
 
 ```bash
+npm intall  //para la intalación de node.js
+export NODE_TLS_REJECT_UNAUTHORIZED=0 && ng serve /*Esta parte no es necesaria, solo muestra un error en angular y solo sirve sí es que utiliza GitBash como terminal. En caso de que ocurra un error de la api, esto sucede por certificados de seguridad en desarrollo de node*/
 ng serve
 ```
 
