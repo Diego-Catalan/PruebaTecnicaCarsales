@@ -23,9 +23,22 @@ namespace RickAndMortyBackend.Models
         public int Id { get; set; }
         [JsonPropertyName("name")]
         public string Name { get; set; }
+        [JsonPropertyName("characters")]
+        public List<string> Characters { get; set; }
         [JsonPropertyName("episode")]
         public string Episode { get; set; }
         [JsonPropertyName("air_date")]
         public string AirDate { get; set; }
+    }
+    public class Character
+    {
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
+
+        [JsonPropertyName("url")]
+        public string Url { get; set; }
     }
 }
